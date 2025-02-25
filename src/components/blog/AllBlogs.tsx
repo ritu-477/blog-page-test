@@ -64,9 +64,10 @@ const AllBlogs = () => {
               key={i}
               href={`/blog/${obj.title.toLowerCase().replace(/ /g, "-")}`}
             >
+              <div className="relative p-[1px] rounded-[10px] bg-gradient-to-bl from-light-green/0 to-light-green/100">
               <div
                 key={i}
-                className="relative w-full max-w-[364px] mx-auto border border-light-green rounded-[10px] bg-white bg-opacity-[0.03] h-[498px] overflow-hidden"
+                className="relative w-full max-w-[364px] mx-auto rounded-[10px] bg-light-black h-[498px] overflow-hidden"
               >
                 <div className="max-w-[364px] overflow-hidden h-[237px]">
                   <Image
@@ -116,6 +117,7 @@ const AllBlogs = () => {
                     />
                   </div>
                 </div>
+              </div>
               </div>
             </Link>
           ))}

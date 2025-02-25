@@ -22,7 +22,7 @@ const CustomMarket = ({
   return (
     <div className="container mx-auto max-w-[1140px]">
       <div className="max-w-[655px]">
-        <Heading title={heading} textTwo={colorHeading} />
+        <Heading customClass="max-w-[462px]"  title={heading} textTwo={colorHeading} />
         {description && (
             <p className="sm:text-base text-sm font-normal text-white opacity-80 !leading-custom-xl pt-4">{description}</p>
         )}
@@ -38,8 +38,8 @@ const CustomMarket = ({
               </div>
             ))}
         </div>
-        <div className="mt-10 max-lg:mt-8 max-md:mt-5 max-sm:mt-3 rounded-[10px] bg-aiDriven !p-[1px]">
-          <div className="!bg-navy-blue border border-light-green p-2.5 max-w-[653px] rounded-[10px] w-full h-full">
+        <div className="mt-10 max-lg:mt-8 max-md:mt-5 max-sm:mt-3 !rounded-[10px] relative p-[2px] bg-gradient-to-b from-light-green/0 to-light-green">
+          <div className="!bg-navy-blue p-2.5 max-w-[653px] rounded-[10px] w-full h-full">
             <Image
               src={image}
               width={635}
@@ -55,3 +55,4 @@ const CustomMarket = ({
 };
 
 export default CustomMarket;
+

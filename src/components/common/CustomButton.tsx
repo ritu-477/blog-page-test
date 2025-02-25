@@ -6,6 +6,7 @@ interface CustomButtonProps {
     customClass?: string;
     myOnClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;}
 
+
 const CustomButton: React.FC<CustomButtonProps> = ({ title, customClass = "", myOnClick, }) => {
     return (
         <button

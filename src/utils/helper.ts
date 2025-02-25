@@ -58,8 +58,8 @@ export const HEADER_LIST= [
         link: "#arrowtrade",
     },
     {
-        title: "Blog",
-        link: "#blog",
+      title: "Blog",
+      link: "#blog",
     },
 ];
 

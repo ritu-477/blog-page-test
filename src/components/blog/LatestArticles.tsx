@@ -6,7 +6,7 @@ import Image from "next/image";
 import CustomButton from "../common/CustomButton";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Navigation, Pagination,A11y } from "swiper/modules";
+import { Navigation, Pagination,A11y,Autoplay } from "swiper/modules";
 import Heading from "../common/Heading";
 
 const LatestArticles = () => {
@@ -17,6 +17,7 @@ const LatestArticles = () => {
           {/* Swiper Container */}
           <Swiper
             loop={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             navigation={{
               nextEl: ".right-btn",
               prevEl: ".left-btn",
@@ -25,7 +26,7 @@ const LatestArticles = () => {
               clickable: true,
               el: ".swiper-pagination",
             }}
-            modules={[Navigation, Pagination, A11y]}
+            modules={[Navigation, Pagination, A11y,Autoplay]}
             spaceBetween={20}
             slidesPerView={3}
             breakpoints={{
@@ -43,7 +44,8 @@ const LatestArticles = () => {
           >
             {ARTICLES_CARD_LIST.slice(-3).map((obj, i) => (
               <SwiperSlide key={i}>
-                <div className="relative w-full max-w-[364px] mx-auto border h-[498px] border-light-green rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden">
+                <div className="relative p-[1px] rounded-[10px] bg-gradient-to-bl from-light-green/0 to-light-green/100">
+                <div className="relative w-full max-w-[364px] mx-auto border h-[498px] rounded-[10px] bg-light-black pb-10 overflow-hidden">
                   <div className="max-w-[364px] overflow-hidden h-[237px]">
                     <Image
                       width={364}
@@ -95,6 +97,7 @@ const LatestArticles = () => {
                       />
                     </div>
                   </div>
+                </div>
                 </div>
               </SwiperSlide>
             ))}

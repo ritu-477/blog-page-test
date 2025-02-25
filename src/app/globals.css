@@ -12,6 +12,11 @@ body {
  background-color: #070508;
 }
 
+#nprogress .bar {
+    background: white !important;
+   height: 4px !important;
+}
+
 .text-stroke{
     -webkit-text-stroke: 0.5px #71ced0;
 }
@@ -19,4 +24,3 @@ body {
 .rfm-marquee {
     min-width: var(--min-width) none !important;
 }
-

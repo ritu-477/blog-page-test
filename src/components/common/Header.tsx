@@ -5,6 +5,7 @@ import Image from "next/image";
 import CustomButton from "../common/CustomButton";
 import { HEADER_LIST } from "@/utils/helper";
 
+
 interface HeaderItem {
   title: string;
   link: string;
@@ -58,11 +59,11 @@ const Header = () => {
           <div className="flex flex-col gap-6 items-center">
             <CustomButton
               title="Sign Up"
-              customClass="lg:hidden shadow-none text-black bg-light-green px-[24.7px] py-3.5 border border-light-green hover:bg-light-green hover:text-black"
+              customClass="lg:hidden shadow-none text-black bg-light-green px-[24.7px] py-3.5 border border-light-green hover:bg-black hover:text-light-green"
             />
             <CustomButton
               title="Login"
-              customClass="lg:hidden text-black bg-light-green px-[24.7px] py-3.5 border border-light-green !text-black hover:text-lightGreen hover:bg-transparent"
+              customClass="lg:hidden text-black bg-light-green px-[24.7px] py-3.5 border border-light-green text-black hover:text-light-green hover:bg-transparent"
             />
           </div>
         </div>
@@ -74,11 +75,10 @@ const Header = () => {
           />
           <CustomButton
             title="Login"
-            customClass ="max-lg:hidden text-black bg-light-green px-[24.7px] py-3.5 border border-light-green !text-black rounded-full hover:!text-light-green hover:bg-transparent"
+            customClass ="max-lg:hidden text-black bg-light-green px-[24.7px] py-3.5 border border-light-green !text-black rounded-full hover:text-light-green hover:bg-transparent"
           />
         </div>
 
-        {/* Toggle button */}
         <div
           onClick={() => setOpen(!open)}
           className="z-50 flex-col gap-1 lg:hidden flex cursor-pointer"
