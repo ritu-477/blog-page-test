@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center gap-6 pt-[50px] pb-[80px]">
+        <div className="flex items-center gap-6 lg:pt-[50px] lg:pb-[80px] pt-8 pb-12">
           {FOOTER_SOCIAL_LINKS.map((obj, i) => (
             <Link key={i} target="_blank" href={obj.link}>
               <Image src={obj.image} alt="icons" width={40} height={40} />

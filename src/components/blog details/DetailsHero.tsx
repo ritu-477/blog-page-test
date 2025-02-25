@@ -5,39 +5,44 @@ import Image from "next/image";
 import { ARTICLES_CARD_LIST } from "@/utils/helper";
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import Heading from "../common/Heading";
+import TradeMarquee from "../common/TradeMarquee";
+import CustomButton from "../common/CustomButton";
+import "nprogress/nprogress.css";
+import NProgress from "nprogress";
 
 const DetailsHero = () => {
-    const { tittle } = useParams();
-const blogArray = ARTICLES_CARD_LIST.filter(
-  (obj) =>
-    obj && obj.title && obj.title.toLowerCase().replace(/\s+/g, "-") === tittle
-);
+  const { tittle } = useParams();
+  NProgress.start();
+  setTimeout(() => {
+    NProgress.done();
+  }, 400);
+  const blogArray = ARTICLES_CARD_LIST.filter(
+    (obj) =>
+      obj && obj.title && obj.title.toLowerCase().replace(/\s+/g, "-") === tittle
+  );
 
-const newBlogs: any = blogArray.length ? blogArray[0] : null; 
+  const newBlogs: any = blogArray.length ? blogArray[0] : null;
 
   return (
-    <div className="pb-[271px]">
-      {newBlogs ? ( 
+    <div className="lg:pb-[271px] md:pb-[230px] pb-[200px] max-xl:bg-black/50">
+      <TradeMarquee/>
+      {newBlogs ? (
         <div className="max-w-[1440px] mx-auto relative">
           <Header />
           <div className="container mt-[91px] max-w-[1140px] mx-auto">
             <div className="max-w-[481px]">
-              <h2 className="text-[64.09px] max-w-[718px] text-white max-lg:text-6xl max-md:text-5xl max-sm:text-4xl leading-[121%]">
-                {newBlogs.title}
-                <span className="text-cyan hidden font-semibold max-sm:block">
-                  Market Insights
-                </span>
-              </h2>
-              <p className="text-base leading-6 text-lightGreen">
+                <Heading title='Real-Time ' textTwo="Market Insights" customClass="!max-w-[360px]" />
+                <p className="text-base leading-6 pt-4 pb-[30px] text-white opacity-80 font-normal max-xl:max-w-none">
                 {newBlogs.description}
               </p>
               <div className="gap-4 items-center flex">
-                <button className="py-[7px] px-[37px] whitespace-nowrap text-white/80 border border-solid border-cyan bg-darkGray rounded-[50px] text-sm leading-[150%]">
-                  Productivity
-                </button>
-                <button className="py-[7px] px-[40px] whitespace-nowrap text-white/80 border border-solid bg-lightBlack border-white rounded-[50px] text-sm leading-[150%]">
-                  {newBlogs.timeReamining}
-                </button>
+                <CustomButton title=" Productivity" customClass="py-[6px] hover:opacity-100 border border-light-green text-nowrap xl:px-[31px] opacity-80 px-6 bg-light-black text-white shadow-none hover:text-light-green hover:bg-white ho
+                 rounded-full text-sm leading-[21px] xl:min-w-[154px]"/>
+                <CustomButton
+                  title={newBlogs.timeReamining}
+                 customClass="py-[6px] opacity-80 hover:opacity-100 text-nowrap hover:text-light-green hover:bg-white bg-dark-black border border-white text-sm text-white opacity-80 xl:px-[37px] px-6"
+                />
                 <p className="leading-[150%] font-semibold max-md:text-sm text-white">
                   {newBlogs.date}
                 </p>
@@ -48,7 +53,7 @@ const newBlogs: any = blogArray.length ? blogArray[0] : null;
               height={570}
               alt="blogs image"
               src={newBlogs.image}
-              className="absolute h-[570px] object-cover top-0 right-0"
+              className="absolute h-[570px] object-cover top-0 right-0 -z-10"
             />
           </div>
         </div>

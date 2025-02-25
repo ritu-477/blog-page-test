@@ -16,3 +16,7 @@ body {
     -webkit-text-stroke: 0.5px #71ced0;
 }
 
+.rfm-marquee {
+    min-width: var(--min-width) none !important;
+}
+

@@ -6,13 +6,13 @@ import Footer from '@/components/common/Footer'
 
 const page = () => {
     return (
-      <>
-      <DetailsHero />
+        <>
+            <DetailsHero />
             <MarketInsights />
             <LatestArticles />
-            <Footer/>
-            </>
-  )
+            <Footer />
+        </>
+    )
 }
 
 export default page

@@ -28,6 +28,7 @@ export default {
         "custom-gray": "#4C4C4C",
         "custom-red": "#D01314",
         "custom-green": "#00C11F",
+        "navy-blue": "#0E0C0F",
       },
 
       fontSize: {

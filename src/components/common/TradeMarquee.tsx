@@ -4,7 +4,7 @@ import { TRADE_LIST } from "@/utils/helper";
 const TradeMarquee = () => {
   return (
     <Marquee direction="left" pauseOnHover={true}>
-      <div className="flex items-center gap-[60px] bg-light-green py-[18px]">
+      <div className="flex items-center gap-8 lg:gap-[60px] bg-light-green py-[18px] w-full">
         {TRADE_LIST.map((item, i) => (
           <div
             key={i}
