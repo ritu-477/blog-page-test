@@ -13,7 +13,7 @@ const LatestArticles = () => {
     return (
       <div className="relative pb-[120px] max-w-[1920px] mx-auto">
         <div className="container">
-          <Heading customClass="text-center lg:pb-[70px] pb-10" title="Latest" textTwo="Articles"/>
+          <Heading customClass="text-center lg:pb-[70px] pb-10" title="Latest " textTwo="Articles"/>
           {/* Swiper Container */}
           <Swiper
             loop={true}
@@ -60,16 +60,16 @@ const LatestArticles = () => {
                     <div className="w-full gap-4 xl:gap-6 flex items-center justify-center -mt-6 relative z-30">
                       <CustomButton
                         title="Productivity"
-                        customClass="py-[7px] border border-light-green text-nowrap xl:px-[34.875px] px-6 bg-light-black text-white shadow-none hover:text-light-green hover:bg-white rounded-full text-sm leading-[21px] xl:min-w-[154px]"
+                        customClass="py-[6px] border border-light-green text-nowrap xl:px-[34.875px] px-6 bg-light-black text-white shadow-none hover:text-light-green hover:bg-white rounded-full text-sm leading-[21px] xl:min-w-[154px]"
                       />
                       <CustomButton
                         title={obj.timeReamining}
-                        customClass="py-[7px] border border-white text-nowrap xl:px-[34.875px] px-6 bg-dark-black text-white shadow-none rounded-full text-sm leading-[21px] border-white xl:min-w-[154px] hover:bg-white hover:text-light-green"
+                        customClass="py-[6px] border border-white text-nowrap xl:px-[34.875px] px-6 bg-dark-black text-white shadow-none rounded-full text-sm leading-[21px] border-white xl:min-w-[154px] hover:bg-white hover:text-light-green"
                       />
                     </div>
-                    <h2 className="text-white pt-6 pb-2.5 text-xl font-semibold leading-[24.4px]">
+                    <h3 className="text-white text-nowrap pt-6 pb-2.5 text-xl font-semibold leading-custom-sm">
                       {obj.title}
-                    </h2>
+                    </h3>
                     <p className="text-white opacity-70 max-w-[323px] pb-6 text-base leading-6">
                       {obj.description}
                     </p>

@@ -34,11 +34,11 @@ const BlogCards = () => {
       <Image
                 width={237}
                 height={237}
-                className="object-cover absolute right-0 top-[35%] lg:block hidden"
+                className="object-cover absolute right-0 top-[35%] lg:block hidden -z-10"
                 src="/assets/images/png/all-blogs-ellipse.png"
                 alt="all-blogs-ellipse"
               />
-      <div className="pt-[30px] container mx-auto pb-[180px]">
+      <div className="pt-[30px] container mx-auto xl:pb-[180px] lg:pb-28 md:pb-20 pb-12">
       <div className="flex items-center justify-start py-[17px] pl-[30px] gap-2.5 border border-white border-opacity-25 max-w-[558px] mx-auto rounded-full">
         <label htmlFor="search" className="cursor-pointer">
              <IconSearch/>
@@ -55,13 +55,13 @@ const BlogCards = () => {
         {allCard.map((obj, i) => (
           <div
             key={i}
-            className="relative w-full max-w-[364px] mx-auto border border-light-green rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden"
+            className="relative w-full max-w-[364px] mx-auto border border-light-green rounded-[10px] bg-white bg-opacity-[0.03] h-[498px] overflow-hidden"
           >
             <div className="max-w-[364px] overflow-hidden h-[237px]">
               <Image
                 width={364}
                 height={237}
-                className="max-w-[364px] object-cover hover:scale-110 duration-300 ease-linear"
+                className="max-w-[364px] object-cover h-[237px] hover:scale-110 duration-300 ease-linear"
                 src={obj.image}
                 alt="article image"
               />
@@ -73,14 +73,14 @@ const BlogCards = () => {
               <div className="w-full xl:gap-6 gap-4 flex items-center justify-center -mt-6 relative z-10">
                 <CustomButton
                   title="Productivity"
-                 customClass="py-[7px] bg-light-black hover:text-light-green hover:bg-white border border-light-green text-sm text-white opacity-80 xl:px-[31px] px-6"
+                 customClass="py-[6px] bg-light-black hover:text-light-green hover:bg-white border border-light-green text-sm text-white opacity-80 xl:px-[31px] px-6"
                 />
                 <CustomButton
                   title={obj.timeReamining}
-                 customClass="py-[7px] text-nowrap hover:text-light-green hover:bg-white bg-dark-black border border-white text-sm text-white opacity-80 xl:px-[37px] px-6"
+                 customClass="py-[6px] text-nowrap hover:text-light-green hover:bg-white bg-dark-black border border-white text-sm text-white opacity-80 xl:px-[37px] px-6"
                 />
               </div>
-              <h3 className="font-semibold text-xl text-white pt-6 pb-2.5 leading-custom-sm">
+              <h3 className="font-semibold text-nowrap text-xl text-white pt-6 pb-2.5 leading-custom-sm">
                 {obj.title}
               </h3>
               <Description  title={obj.description} />             
