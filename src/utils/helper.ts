@@ -1,7 +1,3 @@
-interface HeaderItem {
-    title: string;
-    link: string;
-}
 
 interface TradeItem {
     title: string;
@@ -44,7 +40,7 @@ interface ArticleCardList {
   }
   
 
-export const HEADER_LIST: HeaderItem[] = [
+export const HEADER_LIST= [
     {
         title: "Home",
         link: "#home",
@@ -99,7 +95,7 @@ export const ARTICLES_CARD_LIST: ArticleCardList[] = [
       title: "Real-Time Market Insights",
       description:
         "Stay ahead with AI-driven analytics, real-time news updates, and expert market research to make informed decisions.",
-      authorImg: "/assets/images/webp/darrell-steward.webp",
+      authorImg: "/assets/images/webp/darell-stwerd.webp",
       authorName: "Darrell Steward",
     },
     {

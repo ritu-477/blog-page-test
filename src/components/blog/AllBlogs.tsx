@@ -102,7 +102,7 @@ const AllBlogs = () => {
                         height={50}
                         className="max-w-[50px] object-cover"
                         src={obj.authorImg}
-                        alt="author image"
+                        alt="author-image"
                       />
                       <p className="text-base font-semibold text-white">
                         {obj.authorName}

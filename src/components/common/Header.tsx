@@ -5,9 +5,13 @@ import Image from "next/image";
 import CustomButton from "../common/CustomButton";
 import { HEADER_LIST } from "@/utils/helper";
 
+interface HeaderItem {
+  title: string;
+  link: string;
+}
 const Header = () => {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState<Number | null>(4);
+  const [active, setActive] = useState<number | null>(4);
   const activeHandler = (index: number) => {
     setActive(active === index ? null : index);
   };
@@ -31,7 +35,7 @@ const Header = () => {
             open ? "max-lg:right-0 max-lg:bg-black" : "max-lg:-right-full"
           }`}
         >
-          {HEADER_LIST.map((obj, i) => (
+          {HEADER_LIST.map((obj: HeaderItem, i) => (
             <div key={i} className=" cursor-pointer">
               <Link
                 href={obj.link}
