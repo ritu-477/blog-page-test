@@ -7,11 +7,10 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 
 const DetailsHero = () => {
-  const { title } = useParams();
-
+    const { tittle } = useParams();
 const blogArray = ARTICLES_CARD_LIST.filter(
   (obj) =>
-    obj && obj.title && obj.title.toLowerCase().replace(/\s+/g, "-") === title
+    obj && obj.title && obj.title.toLowerCase().replace(/\s+/g, "-") === tittle
 );
 
 const newBlogs: any = blogArray.length ? blogArray[0] : null; 
