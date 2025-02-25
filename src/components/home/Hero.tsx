@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../common/Header";
 import Image from "next/image";
 import AllBlogs from "./AllBlogs";
-import Description from '../common/Description'
 import LatestArticles from "./LatestArticles";
 import Footer from "../common/Footer";
 const Hero = () => {

@@ -1,77 +1,3 @@
-// import React from "react";
-// import Image from "next/image";
-// import CustomButton from "../common/CustomButton";
-// import Description from "../common/Description";
-// import { BLOG_LIST } from "@/utils/helper"; 
-
-// const AllBlogs = () => {
-//   return (
-//     <div className="pb-[90px]">
-//       <div className="container mx-auto px-4">
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//           {BLOG_LIST.map((obj, index) => ( 
-//             <div key={index} className="w-full">
-//               <div className="rounded-[10px] h-[498px] backdrop-blur-3xl bg-light-black border-light-green border">
-//                 <Image
-//                   className="h-auto object-cover w-full"
-//                   src={obj.image}
-//                   alt="Blog Image"
-//                   width={364}
-//                   height={237}
-//                 />
-//                 <div className="px-5 -translate-y-3 flex gap-4">
-//                   <CustomButton
-//                     customClass="py-[7px] bg-light-black border border-light-green text-sm text-white opacity-80 px-[31px]"
-//                     title={obj.category}
-//                   />
-//                   <CustomButton
-//                     customClass="py-[7px] bg-light-black border border-white text-sm text-white opacity-80 px-[37px]"
-//                     title={obj.readTime}
-//                   />
-//                 </div>
-//                 <div className="pt-3 px-5">
-//                   <p className="pb-[10px] font-semibold text-xl text-white">
-//                     {obj.title}
-//                   </p>
-//                   <Description title={obj.description} />
-//                 </div>
-//                 <div className="pt-6 px-5 flex justify-between items-center">
-//                   <div className="flex items-center gap-[10px]">
-//                     <Image
-//                       className="w-[50px] h-[50px] rounded-full"
-//                       src={obj.author.image}
-//                       alt={obj.author.name}
-//                       width={50}
-//                       height={50}
-//                     />
-//                     <p className="text-base font-semibold text-white">
-//                       {obj.author.name}
-//                     </p>
-//                   </div>
-//                   <Image
-//                     width={20}
-//                     height={18}
-//                     alt="icon-arrow"
-//                     src="/assets/images/svg/icon-arrow.svg"
-//                   />
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//         <div className="flex justify-center mt-10">
-//           <CustomButton
-//             customClass="text-black px-6 py-4 bg-light-green border border-light-green hover:text-white hover:bg-black"
-//             title="See All Blogs"
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AllBlogs;
-
 "use client";
 import { ARTICLES_CARD_LIST } from "@/utils/helper";
 import Image from "next/image";
@@ -81,9 +7,8 @@ import { useSearchParams } from "next/navigation";
 import { IconSearch } from '@/utils/icons'
 import Description from "../common/Description";
 
-
 const BlogCards = () => {
-  const [open, setOpen] = useState(3);
+  const [open, setOpen] = useState(6);
   const [search, setSearch] = useState("");
   const searchParams = useSearchParams();
 
@@ -105,7 +30,15 @@ const BlogCards = () => {
   };
 
   return (
-    <div className="pt-[30px] container mx-auto pb-[180px]">
+    <div className="relative max-w-[1920px] mx-auto">
+      <Image
+                width={237}
+                height={237}
+                className="object-cover absolute right-0 top-[35%] lg:block hidden"
+                src="/assets/images/png/all-blogs-ellipse.png"
+                alt="all-blogs-ellipse"
+              />
+      <div className="pt-[30px] container mx-auto pb-[180px]">
       <div className="flex items-center justify-start py-[17px] pl-[30px] gap-2.5 border border-white border-opacity-25 max-w-[558px] mx-auto rounded-full">
         <label htmlFor="search" className="cursor-pointer">
              <IconSearch/>
@@ -140,11 +73,11 @@ const BlogCards = () => {
               <div className="w-full xl:gap-6 gap-4 flex items-center justify-center -mt-6 relative z-10">
                 <CustomButton
                   title="Productivity"
-                 customClass="py-[7px] bg-light-black border border-light-green text-sm text-white opacity-80 xl:px-[31px] px-6"
+                 customClass="py-[7px] bg-light-black hover:text-light-green hover:bg-white border border-light-green text-sm text-white opacity-80 xl:px-[31px] px-6"
                 />
                 <CustomButton
                   title={obj.timeReamining}
-                 customClass="py-[7px] text-nowrap bg-dark-black border border-white text-sm text-white opacity-80 xl:px-[37px] px-6"
+                 customClass="py-[7px] text-nowrap hover:text-light-green hover:bg-white bg-dark-black border border-white text-sm text-white opacity-80 xl:px-[37px] px-6"
                 />
               </div>
               <h3 className="font-semibold text-xl text-white pt-6 pb-2.5 leading-custom-sm">
@@ -186,6 +119,7 @@ const BlogCards = () => {
           }
         />
       </div>
+    </div>
     </div>
   );
 };

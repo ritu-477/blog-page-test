@@ -12,3 +12,7 @@ body {
  background-color: #070508;
 }
 
+.text-stroke{
+    -webkit-text-stroke: 0.5px #71ced0;
+}
+
