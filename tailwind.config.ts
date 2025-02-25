@@ -40,7 +40,11 @@ export default {
         "custom-lg": "121.19%",
         "custom-xl": "150%",
       },
+
+      backgroundImage: {
+        "footer-bg": "url('/public/assets/images/webp/footer-bg.webp')",
     },
   },
+},
   plugins: [],
 } satisfies Config;
