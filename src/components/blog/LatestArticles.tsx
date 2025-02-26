@@ -14,7 +14,6 @@ const LatestArticles = () => {
       <div className="relative lg:pb-[120px] md:pb-24 pb-12 max-w-[1920px] mx-auto">
         <div className="container">
           <Heading customClass="text-center lg:pb-[70px] pb-10" title="Latest " textTwo="Articles"/>
-          {/* Swiper Container */}
           <Swiper
             loop={true}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -45,7 +44,7 @@ const LatestArticles = () => {
             {ARTICLES_CARD_LIST.slice(-3).map((obj, i) => (
               <SwiperSlide key={i}>
                 <div className="relative p-[1px] rounded-[10px] bg-gradient-to-bl from-light-green/0 to-light-green/100">
-                <div className="relative w-full max-w-[364px] mx-auto border h-[498px] rounded-[10px] bg-light-black pb-10 overflow-hidden">
+                <div className="relative w-full max-w-[364px] mx-auto h-[498px] rounded-[10px] bg-light-black pb-10 overflow-hidden">
                   <div className="max-w-[364px] overflow-hidden h-[237px]">
                     <Image
                       width={364}
