@@ -75,7 +75,7 @@ const Header = () => {
           />
           <CustomButton
             title="Login"
-            customClass ="max-lg:hidden text-black bg-light-green px-[24.7px] py-3.5 border border-light-green !text-black rounded-full hover:text-light-green hover:bg-transparent"
+            customClass ="max-lg:hidden text-black bg-light-green px-[24.7px] py-3.5 border border-light-green text-black rounded-full hover:text-light-green hover:bg-transparent"
           />
         </div>
 
